@@ -1,0 +1,32 @@
+<html>
+<body>
+<h1>
+Daniel Ngan's Home Page
+</h1>
+<script>
+    var LHC_API = LHC_API || {};
+    LHC_API.args = {
+        mode: 'widget',
+        lhc_base_url: '//livehelperchat.twdc.tophenix.com/',
+        wheight: 450,
+        wwidth: 350,
+        pheight: 520,
+        pwidth: 500,
+        leaveamessage: true,
+        department: ["3"],
+        check_messages: false
+    };
+    (function () {
+        let po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.setAttribute('crossorigin', 'anonymous');
+        po.async = true;
+        let date = new Date();
+        po.src = '//livehelperchat.twdc.tophenix.com/design/defaulttheme/js/widgetv2/index.js?' +
+            ("" + date.getFullYear() + date.getMonth() + date.getDate());
+        let s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+</body>
+</html>
